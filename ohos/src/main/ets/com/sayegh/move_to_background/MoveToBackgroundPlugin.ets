@@ -18,7 +18,6 @@ import type { AbilityPluginBinding } from '@ohos/flutter_ohos/src/main/ets/embed
 export default class MoveToBackgroundPlugin implements FlutterPlugin, MethodCallHandler, AbilityAware {
   private channel: MethodChannel | null = null;
   private ability: UIAbility | null = null;
-  private abilityContext: common.UIAbilityContext | null = null;
 
   constructor() {
   }
@@ -38,17 +37,14 @@ export default class MoveToBackgroundPlugin implements FlutterPlugin, MethodCall
     }
     this.channel = null;
     this.ability = null;
-    this.abilityContext = null;
   }
 
   onAttachedToAbility(binding: AbilityPluginBinding): void {
     this.ability = binding.getAbility();
-    this.abilityContext = this.ability.context as common.UIAbilityContext;
   }
 
   onDetachedFromAbility(): void {
     this.ability = null;
-    this.abilityContext = null;
   }
 
   onMethodCall(call: MethodCall, result: MethodResult): void {
@@ -62,8 +58,8 @@ export default class MoveToBackgroundPlugin implements FlutterPlugin, MethodCall
 
   private moveTaskToBack(result: MethodResult): void {
     const ability = this.ability;
-    if (ability === null || this.abilityContext === null) {
-      result.error('no_ability', 'UIAbility context is not attached.', null);
+    if (ability === null) {
+      result.error('no_ability', 'UIAbility is not attached.', null);
       return;
     }
 
