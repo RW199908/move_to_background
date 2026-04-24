@@ -1,0 +1,7 @@
+.idea/
+android/.idea/
+move_to_background.iml
+ohos/local.properties
+example/ohos/local.properties
+ohos/oh-package-lock.json5
+example/ohos/oh-package-lock.json5

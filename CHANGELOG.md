@@ -1,3 +1,8 @@
+## Unreleased
+
+- Add OpenHarmony platform support with `ohos/` and `example/ohos/` projects.
+- Implement `moveTaskToBack` on OpenHarmony using `UIAbilityContext.terminateSelf()`.
+
 ## 1.0.2
 
 - null-safety release

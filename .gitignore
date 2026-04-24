@@ -94,3 +94,13 @@ lint/generated/
 lint/outputs/
 lint/tmp/
 # lint/reports/
+
+# Keep legacy checked-in IDE files visible to Git so `pub publish --dry-run`
+# does not treat them as tracked-but-ignored. `.pubignore` excludes them from publication.
+!.idea/libraries/
+!.idea/libraries/Dart_SDK.xml
+!.idea/libraries/Flutter_for_Android.xml
+!.idea/modules.xml
+!android/.idea/modules.xml
+!android/.idea/vcs.xml
+!move_to_background.iml

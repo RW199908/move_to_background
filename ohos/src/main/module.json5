@@ -1,0 +1,10 @@
+{
+  "module": {
+    "name": "move_to_background",
+    "type": "har",
+    "deviceTypes": [
+      "default",
+      "tablet"
+    ]
+  }
+}

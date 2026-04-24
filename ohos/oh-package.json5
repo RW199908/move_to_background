@@ -1,0 +1,11 @@
+{
+  "name": "move_to_background",
+  "version": "1.0.2",
+  "description": "OpenHarmony implementation for the move_to_background Flutter plugin.",
+  "main": "index.ets",
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@ohos/flutter_ohos": "file:./har/flutter.har"
+  }
+}
